@@ -19,7 +19,7 @@ class AttendeeSeeder extends Seeder
             $eventsToAttend = $events->random(rand(1, 3));
 
             foreach($eventsToAttend as $event ){
-                \App\Models\Attendee::created([
+                \App\Models\Attendee::create([
                     "user_id" => $user->id,
                     "event_id" => $event->id
                 ]);
